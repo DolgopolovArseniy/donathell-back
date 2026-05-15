@@ -2,6 +2,8 @@ const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 
 dotenv.config({ path: './config.env' });
+const { pub, sub } = require('./utils/redis');
+
 const app = require('./app');
 
 const DB = process.env.DATABASE.replace(

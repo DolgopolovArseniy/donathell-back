@@ -9,4 +9,8 @@ router
   .get(authController.protect, transactionController.getUserTransactions)
   .post(transactionController.createTransaction);
 
+router
+  .route('/stream')
+  .get(authController.protect, transactionController.connectToStream);
+
 module.exports = router;
